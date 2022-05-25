@@ -88,7 +88,7 @@
 
 async function getUser(userId) {
     try {
-        console.log("waiting");
+        console.log("found user");
     //    const user = await Promise.reject(new Error('Invalid User Id'));
     } catch(error) {
        console.log(error);
@@ -98,7 +98,8 @@ async function getUser(userId) {
 async function getServices() {
     await new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve();
+            // resolve();
+            // reject();
             console.log("looking");
         },1000)    
     }) 
@@ -111,9 +112,9 @@ async function showServiceCost() {
     try {
         let services = await getServices();
        let user = await getUser();
-       //    console.log(`The service cost is $ 1000`);
+          console.log(`The service cost is $ 1000`);
     } catch(error) {
-       console.log(error);
+       console.log("error called");
     }
 }
 
